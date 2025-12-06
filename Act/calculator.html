@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="calculator.css">
+    <title>Calculator</title>
+</head>
+
+<body>
+    <header>
+        <h3>AshTech.</h3>
+            <nav class="navbar" id="top">
+                <ul>
+                    <li><a href="homepage.html" target="_self">Home</a></li>
+                    <li><a href="project.html" target="_self">Projects</a></li>
+                    <li><a href="#" id="OpenContact">Contact</a></li>
+                </ul>
+            </nav>
+    </header>
+
+    <div id="dimOverlay" class="dim-overlay"></div>
+    <div id="contactPanel" class="contact-panel">
+        <button id="closePanel" class="close-btn">×</button>
+
+        <h2>Get in Touch</h2>
+
+        <div class="contact-info">
+            <p><i class="icon">📧</i> ashlyleona15@gmail.com</p>
+            <p><i class="icon">📞</i> +63 992 901 0806</p>
+            <p><i class="icon">📍</i> Las Piñas, Philippines</p>
+        </div>
+
+        <h3>Social Media</h3>
+        <div class="social-icons">
+            <a href="#"><i>🌐</i></a>
+            <a href="#"><i>📘</i></a>
+            <a href="#"><i>📸</i></a>
+            <a href="#"><i>🎵</i></a>
+        </div>
+    </div>
+
+    <div class="calculator">
+        <h2>Calculator</h2>
+
+        <input type="text" id="display" class="display" disabled>
+
+        <div class="buttons">
+
+            <button onclick="appendNumber('7')">7</button>
+            <button onclick="appendNumber('8')">8</button>
+            <button onclick="appendNumber('9')">9</button>
+            <button class="operator" onclick="toggleSign()">+/-</button>
+
+            <button onclick="appendNumber('4')">4</button>
+            <button onclick="appendNumber('5')">5</button>
+            <button onclick="appendNumber('6')">6</button>
+            <button class="operator" onclick="appendNumber('/')">÷</button>
+
+            <button onclick="appendNumber('1')">1</button>
+            <button onclick="appendNumber('2')">2</button>
+            <button onclick="appendNumber('3')">3</button>
+            <button class="operator" onclick="appendNumber('*')">×</button>
+
+            <button class="clear" onclick="clearDisplay()">C</button>
+            <button class="zero" onclick="appendNumber('0')">0</button>
+            <button onclick="appendNumber('.')">.</button>
+            <button class="operator" onclick="appendNumber('+')">+</button>
+
+            <button class="backspace" onclick="backspace()">←</button>
+            <button class="operator" onclick="appendNumber('-')">-</button>
+            <button class="equal" onclick="calculate()">=</button>
+
+        </div>
+    </div>
+
+<script src="calculator.js"></script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+window.addEventListener("scroll", function () {
+    document.querySelector("header")
+        .classList.toggle("scrolled", window.scrollY > 50);
+});
+
+const cards = document.querySelectorAll(".card");
+
+function revealCards() {
+    cards.forEach(card => {
+        const rect = card.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 80) {
+            card.classList.add("visible");
+        }
+    });
+}
+window.addEventListener("scroll", revealCards);
+window.addEventListener("load", revealCards);
